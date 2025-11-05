@@ -2,7 +2,7 @@ export const NavBar = () => {
   return (
     <header>
       <nav>
-        <ul>
+        <ul className="flex gap-10 justify-center align-center">
           <li>
             <a href="/">Home</a>
           </li>
