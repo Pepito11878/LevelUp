@@ -1,23 +1,38 @@
+"use client";
+import { usePathname } from "next/navigation";
+
 export const NavBar = () => {
+  const pathname = usePathname();
+
+  const links = [
+    { href: "/", label: "Home" },
+    { href: "/Video", label: "Video" },
+    { href: "/Channels", label: "Channels" },
+    { href: "/FreeCoaching", label: "Free Coaching" },
+    { href: "/AdvancedCoaching", label: "Advanced Coaching" },
+  ];
+
   return (
     <header>
-      <nav>
-        <ul className="flex gap-10 justify-center align-center">
+      <nav className="p-5 bg-[#1e272e]">
+        <ul className="flex justify-between items-center">
+          {/* Lien Home à gauche */}
           <li>
-            <a href="/">Home</a>
+            <a href="/" className={pathname === "/" ? "active" : ""}>
+              Home
+            </a>
           </li>
-          <li>
-            <a href="/Video">Video</a>
-          </li>
-          <li>
-            <a href="/Channels">Channels</a>
-          </li>
-          <li>
-            <a href="/FreeCoaching">Free Coaching</a>
-          </li>
-          <li>
-            <a href="/AdvancedCoaching">Advanced Coaching</a>
-          </li>
+
+          {/* Autres liens à droite */}
+          <div className="flex gap-10">
+            {links.slice(1).map(({ href, label }) => (
+              <li key={href}>
+                <a href={href} className={pathname === href ? "active" : ""}>
+                  {label}
+                </a>
+              </li>
+            ))}
+          </div>
         </ul>
       </nav>
     </header>
