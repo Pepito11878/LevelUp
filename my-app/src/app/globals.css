@@ -40,5 +40,5 @@ nav a.active::after {
 
 /* Texte actif reste blanc, pas de changement de couleur */
 nav a.active {
-    color: #f5f6fa;
+    color: #fcd305;
 }
