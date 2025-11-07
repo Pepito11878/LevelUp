@@ -14,7 +14,7 @@ export const NavBar = () => {
 
   return (
     <header>
-      <nav className="p-5 bg-[#1e272e]">
+      <nav className="p-5 bg-[#1d1d1d]">
         <ul className="flex justify-between items-center">
           {/* Lien Home à gauche */}
           <li>
