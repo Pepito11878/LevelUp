@@ -1,44 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
 @import "tailwindcss";
 
 * {
-    font-family: "Oswald", sans-serif;
-}
-
-body {
-    background: #1e272e;
+  font-family: "Oswald", sans-serif;
 }
 
 /* style navbar */
 
-nav li, a {
-    text-transform: uppercase;
-    color: #f5f6fa; /* texte blanc */
-}
-
 nav a {
-    position: relative;
-    text-decoration: none;
+  position: relative;
+  text-decoration: none;
 }
 
 /* Ligne animée au-dessus */
 nav a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0; /* ligne en haut pour overline */
-    width: 0%;
-    height: 2px;
-    background-color: #fcd305; /* couleur de la ligne */
-    transition: width 0.3s ease;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0; /* ligne en haut pour overline */
+  width: 0%;
+  height: 2px;
+  background-color: #fcd305; /* couleur de la ligne */
+  transition: width 0.3s ease;
 }
 
 nav a:hover::after,
 nav a.active::after {
-    width: 100%; /* ligne visible au hover ou si actif */
+  width: 100%; /* ligne visible au hover ou si actif */
 }
 
 /* Texte actif reste blanc, pas de changement de couleur */
 nav a.active {
-    color: #fcd305;
+  color: #fcd305;
 }

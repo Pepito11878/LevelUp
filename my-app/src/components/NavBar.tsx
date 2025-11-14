@@ -18,7 +18,7 @@ export const NavBar = () => {
         <ul className="flex justify-between items-center">
           {/* Lien Home à gauche */}
           <li>
-            <a href="/" className={pathname === "/" ? "active" : ""}>
+            <a href="/" className={`uppercase text-[#f5f6fa] ${pathname === "/" ? "active" : ""}`}>
               Home
             </a>
           </li>
@@ -27,7 +27,7 @@ export const NavBar = () => {
           <div className="flex gap-10">
             {links.slice(1).map(({ href, label }) => (
               <li key={href}>
-                <a href={href} className={pathname === href ? "active" : ""}>
+                <a href={href} className={`uppercase text-[#f5f6fa] ${pathname === href ? "active" : ""}`}>
                   {label}
                 </a>
               </li>
